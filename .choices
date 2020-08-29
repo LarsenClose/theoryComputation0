@@ -1,0 +1,8 @@
+
+
+javac -d /home/lclose/Nextcloud/fall_2020_classes/theory/assignment0 -cp /usr/share/java/junit4.jar /home/lclose/Nextcloud/fall_2020_classes/theory/assignment0/LanguageTest.java
+
+
+javac -d /home/lclose/Nextcloud/fall_2020_classes/theory/assignment0 -cp /usr/share/java/junit4.jar:/usr/share/java/hamcrest-core.jar org.junit.runner.JUnitCore  LanguageTest.java
+
+
