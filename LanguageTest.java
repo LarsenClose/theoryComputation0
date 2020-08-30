@@ -248,5 +248,34 @@ public class LanguageTest {
         assertTrue(lang2.equals(lang1));
         assertEquals(lang1, lang2);
     }
+
+    /**
+     * Verify the overridden hashing implementation.
+     */
+    @Test
+    public void assertHashCodeEqualsTest() {
+        Language lang1 = new Language();
+        Language lang2 = new Language();
+        lang1.addString("ab");
+        lang2.addString("ab");
+        assertEquals(lang1.hashCode(), lang2.hashCode());
+        lang1.addString("abc");
+        lang2.addString("abd");
+        assertNotEquals(lang1.hashCode(), lang2.hashCode());
+        assertEquals(lang2.hashCode() - lang1.hashCode(), 1);
+    }
+    
+    /**
+     * Verify addAllStrings() implementation.
+     */
+    @Test
+    public void addAllStringsTest() {
+        Language lang = new Language();
+        List<String> memberStrings = Arrays.asList("add", "all", "these", "strings");
+        assertTrue(lang.addAllStrings(memberStrings));
+        assertEquals(lang.cardinality(), 4);
+        assertFalse(lang.addAllStrings(memberStrings));
+    }
+
 }
 
