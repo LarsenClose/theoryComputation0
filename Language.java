@@ -23,7 +23,7 @@
          * Create a language with no strings.
          */
         public Language() {
-            strings = EMPTY_SET;
+            strings = new TreeSet<String>();
         }
     
         /**

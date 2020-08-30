@@ -190,7 +190,7 @@ public class LanguageTest {
     }
 
     /**
-     * Verify concatenation two two non-empty languages.
+     * Verify concatenation of two non-empty languages.
      */
     @Test
     public void concatenateNonEmptyTest() {
